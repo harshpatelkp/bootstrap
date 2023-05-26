@@ -1,0 +1,259 @@
+1.What are the advantages of Bootstrap? 
+Ans.
+    > Easy initiation. Coding is a hurricane task for a person who is unbeknownst to web development. 
+    > Responsiveness. 
+    > Highly customizable. 
+    > Extremely user-centric. 
+    > Top-notch support. 
+    > Cross-browser compatibility. 
+    > JavaScript plugins to your rescue. 
+    > Far-reaching popularity.
+
+2.What is a Bootstrap Container, and how does it work? 
+Ans.
+    Containers are the most basic layout element in Bootstrap and are required when using our default grid system.
+    Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested,
+    most layouts do not require a nested container.
+    
+    Bootstrap comes with three different containers:
+
+    .container, which sets a max-width at each responsive breakpoint
+    .container-fluid, which is width: 100% at all breakpoints
+    .container-{breakpoint}, which is width: 100% until the specified breakpoint
+
+*Default container
+Our default .container class is a responsive, fixed-width container, meaning its max-width changes at each breakpoint.
+
+<div class="container">
+  <!-- Content here -->
+</div>
+
+*Responsive containers
+Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, 
+after which we apply max-widths for each of the higher breakpoints. For example, .container-sm is 100% wide to 
+start until the sm breakpoint is reached, where it will scale up with md, lg, xl, and xxl.
+
+
+<div class="container-sm">100% wide until small breakpoint</div>
+<div class="container-md">100% wide until medium breakpoint</div>
+<div class="container-lg">100% wide until large breakpoint</div>
+<div class="container-xl">100% wide until extra large breakpoint</div>
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+
+
+3.What are the default Bootstrap text settings?
+Ans.
+    Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5. The default font-family is "Helvetica Neue", 
+    Helvetica, Arial, sans-serif. In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default).
+
+
+Example
+h1 Bootstrap heading (2.5rem = 40px)
+h2 Bootstrap heading (2rem = 32px)
+h3 Bootstrap heading (1.75rem = 28px)
+h4 Bootstrap heading (1.5rem = 24px)
+h5 Bootstrap heading (1.25rem = 20px)
+h6 Bootstrap heading (1rem = 16px)
+
+4.What do you know about the Bootstrap Grid System?
+Ans.
+    Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive.
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+
+5.What is the difference between Bootstrap 4 and Bootstrap 5?
+Ans.
+    Bootstrap v5.x
+Bootstrap 5 came into play back in May 2021. This release was launched after several iterations of alpha and beta releases and hence had a stack of major additions and new features. Some of the most talked about features are listed below.
+
+Enhanced Grid System
+Enhanced Form elements
+Utilities API
+Support for IE
+Extended Colors
+Bootstrap Icons
+
+6.What is a Button Group, and what is the class for a basic Button Group? 
+Ans.
+   Button groups allow multiple buttons to be stacked together on a single line. This is useful when you want to place items like alignment
+   buttons together. You can add on optional JavaScript radio and checkbox style behavior with Bootstrap Button Plugin. This class is used 
+   for a basic button group.
+
+This class is used for a basic button group.
+       class="btn-group"
+
+example
+      <div class = "btn-group">
+           <button type = "button" class = "btn btn-default">Button1</button>
+           <button type = "button" class = "btn btn-default">Button2</button>
+      </div>
+
+7.How can you use Bootstrap to make thumbnails?
+Ans.
+    Bootstrap - Thumbnails
+        1. Add an <a> tag with the class of . thumbnail around an image.
+        2. This adds four pixels of padding and a gray border.
+        3. On hover, an animated glow outlines the image.
+
+
+8.In Bootstrap 4, what is flexbox?
+Ans.
+     that Bootstrap 4 now uses flexbox, instead of floats, to handle the layout. The Flexible Box Layout Module,
+      makes it easier to design flexible responsive layout structure without using float or positioning.
+
+
+example
+
+
+<! DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title> Bootstrap 4 Flex Box Example </title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script>  
+</head>  
+<style>  
+h2 {  
+  position: relative;  
+  padding: 10;  
+  margin: 10;  
+  font-family: "Raleway", sans-serif;  
+  font-weight: 300;  
+  font-size: 40px;  
+  color: white;  
+  text-align: center;  
+  -webkit-transition: all 0.4s ease 0s;  
+  -o-transition: all 0.4s ease 0s;  
+  transition: all 0.4s ease 0s;  
+}  
+body {  
+    background-size: 400% 400%;  
+           margin: 2rem;  
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);  
+    animation: gradient 15s ease infinite;  
+    height: 100vh;  
+}  
+@keyframes gradient {  
+    0% {  
+        background-position: 0% 50%;  
+    }  
+    50% {  
+        background-position: 100% 50%;  
+    }  
+    100% {  
+        background-position: 0% 50%;  
+    }  
+}  
+</style>  
+<body>   
+<div class="container mt-3">  
+  <h2> Bootstrap 4 Flexbox Auto Margins </h2>  
+  <div class="d-flex mb-3 bg-secondary">  
+    <div class="p-2 mr-auto bg-info"> Flexbox box 1</div>  
+    <div class="p-2 bg-warning"> Flex box 2 </div>  
+    <div class="p-2 bg-primary"> Flex box 3 </div>  
+  </div>  
+  <div class="d-flex mb-3 bg-secondary">  
+    <div class="p-2  bg-info"> Flex box 1 </div>  
+    <div class="p-2 bg-warning"> Flex box 2 </div>  
+    <div class="p-2 ml-auto bg-primary"> Flex box 3 </div>  
+  </div>  
+</div>  
+</body>  
+</html>  
+
+
+9.How can one create an alert in Bootstrap? 
+Ans.
+    Bootstrap provides an easy way to create predefined alert messages:
+
+         ×Success! This alert box indicates a successful or positive action.
+         ×Info! This alert box indicates a neutral informative change or action.
+         ×Warning! This alert box indicates a warning that might need attention.
+         ×Danger! This alert box indicates a dangerous or potentially negative action.
+
+ Alerts are created with the .alert class, followed by one of the four contextual classes .alert-success, .alert-info,
+ .alert-warning or .alert-danger:
+
+example;-
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Alerts</h2>
+  <div class="alert alert-success">
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+  </div>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+  </div>
+  <div class="alert alert-danger">
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>
+
+</body>
+</html>
+
+
+10.
+Ans.
+    A card is a flexible and extensible content container. It includes options for headers and footers,
+    a wide variety of content, contextual background colors, and powerful display options. 
+    If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails.
+
+example
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</body>
+</html>
